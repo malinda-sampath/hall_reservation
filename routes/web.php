@@ -1,7 +1,16 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+    use Illuminate\Support\Facades\Route;
 
-Route::get('/index', function () {
-    return view('index');
-});
+    Route::get('/contact', function () {
+        return view('contact');
+    });
+
+    Route::get('/index', function () {
+        return view('index');
+    });
+
+    Route::get('/admin', function () {
+        return view('admin');
+    });
+?>
