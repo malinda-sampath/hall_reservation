@@ -438,3 +438,17 @@
     padding-right: 0;
     border-right: none;
 }
+
+/* Login */
+.text-login-title{
+    color: #00B98E;
+    text-align: center;
+    margin: auto;
+}
+
+.footer-social{
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+    margin: auto;
+}
