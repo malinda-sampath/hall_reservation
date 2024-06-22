@@ -47,7 +47,7 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
                         
-                        <a href="{{ route('home') }}" class="nav-item nav-link">Home</a>
+                        <a href="{{ route('index') }}" class="nav-item nav-link">Home</a>
                 </div>
             </nav>
         </div>
@@ -130,7 +130,7 @@
         <!-- Login Ends -->
 
         <!-- Footer Start -->
-        <div class="footer bg-dark text-white-50 pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="footer-login bg-dark text-white-50 pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container">
                 <div class="copyright">
                     <div class="row align-items-center">
