@@ -12,6 +12,10 @@
         return view('index');
     });
 
+    Route::get('/index', function () {
+        return view('index');
+    })->name('index');
+
     Auth::routes();
     Route::get('/home', [HomeController::class, 'index'])->name('home');
 
