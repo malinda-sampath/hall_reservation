@@ -371,16 +371,24 @@
 
 
 /*** Footer ***/
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .footer .btn.btn-social {
     margin-right: 5px;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--light);
-    border: 1px solid rgba(255,255,255,0.5);
-    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
     transition: .3s;
 }
 
@@ -414,11 +422,11 @@
 }
 
 .footer .form-control {
-    border-color: rgba(255,255,255,0.5);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .footer .copyright {
-    padding: 25px 0;
+    padding: 10px 0;
     font-size: 15px;
     border-top: 1px solid rgba(256, 256, 256, .1);
 }
@@ -443,7 +451,9 @@
 .text-login-title{
     color: #00B98E;
     text-align: center;
-    margin: auto;
+    margin: 20px;
+    font-size: 40px;
+
 }
 
 .footer-social{
