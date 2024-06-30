@@ -23,7 +23,7 @@ class ContactMail extends Mailable
         $this->user = $user;
     }
     public function build(){
-        
+
     return $this->markdown('emails.contact')->subject(config('app_name') . ',Contact us');
 
     }
@@ -31,6 +31,7 @@ class ContactMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
+
             subject: 'Contact Mail',
         );
     }
