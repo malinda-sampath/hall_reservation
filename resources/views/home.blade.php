@@ -77,6 +77,44 @@
         @endsection
         <!-- sign in -->
 
+        <!-- table view start -->
+        <div class="container">
+            <h1>Table1 Data</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Hall ID</th>
+                        <th>Level</th>
+                        <th>Subject ID</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Visible</th>
+                        <th>Message</th>
+                        <th>Created Date</th>
+                        <th>Updated Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($data as $row)
+                    <tr>
+                        <td>{{ $row->id }}</td>
+                        <td>{{ $row->hall_id }}</td>
+                        <td>{{ $row->level }}</td>
+                        <td>{{ $row->subject_id }}</td>
+                        <td>{{ $row->date }}</td>
+                        <td>{{ $row->time }}</td>
+                        <td>{{ $row->is_visible }}</td>
+                        <td>{{ $row->message }}</td>
+                        <td>{{ $row->created_at }}</td>
+                        <td>{{ $row->updated_at }}</td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+        <!-- table view start -->
+
 
         <!-- Search Start -->
         <div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
