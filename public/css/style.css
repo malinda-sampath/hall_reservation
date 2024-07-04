@@ -371,16 +371,23 @@
 
 
 /*** Footer ***/
+.footer {
+    bottom: 0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .footer .btn.btn-social {
     margin-right: 5px;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--light);
-    border: 1px solid rgba(255,255,255,0.5);
-    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
     transition: .3s;
 }
 
@@ -414,11 +421,11 @@
 }
 
 .footer .form-control {
-    border-color: rgba(255,255,255,0.5);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .footer .copyright {
-    padding: 25px 0;
+    padding: 10px 0;
     font-size: 15px;
     border-top: 1px solid rgba(256, 256, 256, .1);
 }
@@ -437,4 +444,97 @@
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+
+/* Login */
+.footer-login {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.footer-login .btn.btn-social {
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    transition: .3s;
+}
+
+.footer-login .btn.btn-social:hover {
+    color: var(--primary);
+    border-color: var(--light);
+}
+
+.footer-login .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer-login .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer-login .btn.btn-link:hover {
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+.footer-login .form-control {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-login .copyright {
+    padding: 10px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer-login .copyright a {
+    color: var(--light);
+}
+
+.footer-login .footer-menu a {
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, .1);
+}
+
+.footer-login .footer-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+
+/* Login */
+.text-login-title{
+    color: #00B98E;
+    text-align: center;
+    margin: 20px;
+    font-size: 40px;
+
+}
+
+.footer-social{
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+    margin: auto;
 }

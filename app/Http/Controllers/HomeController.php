@@ -35,5 +35,6 @@ class HomeController extends Controller
 
         // Redirect back with success message
         return redirect()->back()->with('success', 'Your request has been submitted');
+
     }
 }
