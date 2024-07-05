@@ -538,3 +538,96 @@
     flex-direction: row;
     margin: auto;
 }
+
+/* admin-form  */
+.container-form{
+    display: grid;
+}
+
+form {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.heading-data-entry-form{
+    text-align: center;
+}
+
+.container-form input[type="text"],
+.container-form input[type="date"],
+.container-form input[type="time"],
+.container-form select,
+.container-form input[type="datetime-local"] {
+    width: calc(25% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.container-form textarea {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width:100%;
+}
+.container-form input[type="checkbox"] {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+.container-form button {
+    background-color:#0C2744;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.container-form button[type="add"] {
+    position:relative;
+    float: right;
+    background-color: #4CAF50; 
+}
+.container-form button[type="add"]:hover,
+.container-form button:hover {
+    background-color: #45a049;
+}
+.container-form .button-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.level{
+    position:relative;
+    left: 50px;
+}
+.subid{
+    position:relative;
+    left: 50px;
+}
+.date{
+    position:relative;
+    left: 14px;
+}
+.sTime{
+    position:relative;
+    left: 28px;   
+}
+.eTime{
+    position:relative;
+    left: 32px;   
+}
+.visibility{
+    position:relative;
+    left: 50px;
+}
+.lecturer_name{
+    width: 100%;
+    padding: 10px;
+}
+
+
+
