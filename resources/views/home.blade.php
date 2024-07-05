@@ -150,6 +150,53 @@
             </div>
         </div>
         <!-- Search End -->
+
+        <!-- Data Form start-->
+        <div class="container-form">
+            
+            <form>
+                <h3 class="heading-data-entry-form">Data Entry Form</h3><p>   
+                
+                <label for="hall_id" class="hall_id">Hall ID:</label>
+                <input type="text" id="hall_id" name="hall_id" required>
+                
+                <label for="level" class="level">Level:</label>
+                    <select id="level" class="level" name="level" required>
+                            <option value="">Select Level</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                    </select>       
+               
+                <label for="subject_id" class="subid">Subject ID:</label>
+                <input type="text" class="subid"id="subject_id" name="subject_id"><br>
+                
+                <label for="date">Date:</label>
+                <input type="date" class="date" id="date" name="date" required>
+        
+                <label for="startTime" class="sTime">Start Time:</label>
+                <input type="time" class="sTime" id="sTime" name="sTime" required>
+
+                <label for="endTime" class="eTime">End Time:</label>
+                <input type="time" class="eTime" id="eTime" name="eTime" required>
+        
+                <label for="visibility" class="visibility">Visibility:</label>
+                <input type="checkbox" class="visibility" id="visibility" name="visibility"><p>
+
+                <label for="lecturer_name">Lecturer Name:</label>
+                <input type="text" class="lecturer_name" id="lecturer_name"><br>
+        
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea><p>
+        
+                <!-- Buttons -->
+                <button type="button">Clear</button>
+                <button type="button">Update</button>
+                <button type="button">Delete</button>
+                <button type="add">Add</button>
+            </form>    
+        </div>
+        <!--Data Form End -->
         
         <!-- Footer Start -->
         <div class="footer bg-dark text-white-50 pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
