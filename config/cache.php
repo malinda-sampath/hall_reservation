@@ -15,7 +15,8 @@ return [
     |
     */
 
-    'default' => env('CACHE_STORE', 'database'),
+    // 'default' => env('CACHE_STORE', 'database'),
+    'default' => env('CACHE_DRIVER', 'file'),
 
     /*
     |--------------------------------------------------------------------------
@@ -33,6 +34,10 @@ return [
 
     'stores' => [
 
+        'apc' => [
+            'driver' => 'apc',
+        ],
+
         'array' => [
             'driver' => 'array',
             'serialize' => false,
@@ -40,9 +45,12 @@ return [
 
         'database' => [
             'driver' => 'database',
-            'table' => env('DB_CACHE_TABLE', 'cache'),
-            'connection' => env('DB_CACHE_CONNECTION'),
-            'lock_connection' => env('DB_CACHE_LOCK_CONNECTION'),
+            'table' => 'cache',
+            'connection' => null,
+            'lock_connection' => null,
+            // 'table' => env('DB_CACHE_TABLE', 'cache'),
+            // 'connection' => env('DB_CACHE_CONNECTION'),
+            // 'lock_connection' => env('DB_CACHE_LOCK_CONNECTION'),
         ],
 
         'file' => [
@@ -72,36 +80,43 @@ return [
 
         'redis' => [
             'driver' => 'redis',
-            'connection' => env('REDIS_CACHE_CONNECTION', 'cache'),
-            'lock_connection' => env('REDIS_CACHE_LOCK_CONNECTION', 'default'),
-        ],
-
-        'dynamodb' => [
-            'driver' => 'dynamodb',
-            'key' => env('AWS_ACCESS_KEY_ID'),
-            'secret' => env('AWS_SECRET_ACCESS_KEY'),
-            'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
-            'table' => env('DYNAMODB_CACHE_TABLE', 'cache'),
-            'endpoint' => env('DYNAMODB_ENDPOINT'),
-        ],
-
-        'octane' => [
-            'driver' => 'octane',
+            'connection' => 'default',
+            'lock_connection' => 'default',
+            // 'connection' => env('REDIS_CACHE_CONNECTION', 'cache'),
+            // 'lock_connection' => env('REDIS_CACHE_LOCK_CONNECTION', 'default'),
         ],
 
     ],
 
-    /*
-    |--------------------------------------------------------------------------
-    | Cache Key Prefix
-    |--------------------------------------------------------------------------
-    |
-    | When utilizing the APC, database, memcached, Redis, and DynamoDB cache
-    | stores, there might be other applications using the same cache. For
-    | that reason, you may prefix every cache key to avoid collisions.
-    |
-    */
+    'prefix' => env('CACHE_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_cache'),
 
-    'prefix' => env('CACHE_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_cache_'),
+
+    //     'dynamodb' => [
+    //         'driver' => 'dynamodb',
+    //         'key' => env('AWS_ACCESS_KEY_ID'),
+    //         'secret' => env('AWS_SECRET_ACCESS_KEY'),
+    //         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
+    //         'table' => env('DYNAMODB_CACHE_TABLE', 'cache'),
+    //         'endpoint' => env('DYNAMODB_ENDPOINT'),
+    //     ],
+
+    //     'octane' => [
+    //         'driver' => 'octane',
+    //     ],
+
+    // ],
+
+    // /*
+    // |--------------------------------------------------------------------------
+    // | Cache Key Prefix
+    // |--------------------------------------------------------------------------
+    // |
+    // | When utilizing the APC, database, memcached, Redis, and DynamoDB cache
+    // | stores, there might be other applications using the same cache. For
+    // | that reason, you may prefix every cache key to avoid collisions.
+    // |
+    // */
+
+    // 'prefix' => env('CACHE_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_cache_'),
 
 ];

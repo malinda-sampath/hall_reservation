@@ -2,6 +2,7 @@
 
     use Illuminate\Support\Facades\Route;
     use App\Http\Controllers\HomeController;
+    use App\Http\Controllers\ContactController;
     use App\Http\Controllers\Auth\LoginController;
 
     Route::get('/contact', function () {
@@ -28,6 +29,11 @@
     Route::middleware(['auth'])->group(function () {
     Route::get('/home', 'AdminController@index')->name('home');
     });
+
+    //Contact Routes
+    Route::get('/contact', [ContactController::class, 'showContactForm'])->name('contact.form');
+    Route::post('contact_mail', [ContactController::class, 'contact_mail_send' ]);
+    Route::get('/confirmation/{id}', [ContactController::class, 'showConfirmation'])->name('contact.confirmation');
 
     Auth::routes();
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
