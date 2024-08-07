@@ -11,7 +11,7 @@ class AddPdfPathToRequestModelsTable extends Migration
      */
     public function up(): void
     {
-        Schema::table('request_models', function (Blueprint $table) {
+        Schema::create('request_models', function (Blueprint $table) {
             $table->string('pdf_path')->nullable();
         });
     }
